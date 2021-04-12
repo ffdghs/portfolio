@@ -4,9 +4,9 @@ function getProjects() {
   $pdo = connectToDatabase();
   
   $query = $pdo->prepare("
-      SELECT *
-      FROM projects
-      ORDER BY id ASC;
+    SELECT *
+    FROM projects
+    ORDER BY id ASC;
   ");
   
   $query->execute();
@@ -19,8 +19,8 @@ function numberProjects() {
   $pdo = connectToDatabase();
   
   $query = $pdo->prepare("
-  SELECT COUNT(id) as nbre
-  FROM projects;
+    SELECT COUNT(id) as nbre
+    FROM projects;
   ");
   
   $query->execute();
@@ -33,7 +33,8 @@ function getPictures() {
 
   $query = $pdo->prepare("
       SELECT *
-      FROM pictures;
+      FROM pictures
+      ORDER BY id ASC;
   ");
 
   $query->execute();

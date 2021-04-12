@@ -1,0 +1,38 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+div {
+  text-align: center;
+}
+
+body > div:nth-child(1) p {
+  padding:50px 0;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body > div:nth-child(1) {
+  background-color: white;
+  margin:0;
+}
+
+body div:nth-child(2) p {
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  width:30%;
+  margin:0 auto;
+  border-radius: 10px;
+  margin-top:50px;
+  font-size: 40px;
+}
+
+button {
+  padding: 10px 5px;
+  margin-top: 20px;
+  border-radius:5px;
+  background-color: coral;
+  border:none;  
+}

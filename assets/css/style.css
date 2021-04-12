@@ -2592,7 +2592,13 @@ footer.white-wrapper .social-links li a {
 }
 
 #skills img {
-    width:100px;
+    height:100px;
+}
+
+#skills p {
+    font-family: 'Courgette', cursive;
+    font-size: 25px;
+    margin-top:1em;
 }
 
 .skill-type {
@@ -2629,3 +2635,11 @@ hr {
 h2 {
     font-size: 50px !important;
 }
+
+h3 {
+    font-size: 35px !important;
+}
+
+/* iframe {
+    border: white 1px solid;
+} */

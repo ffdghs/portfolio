@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+        <style>
+            .top { background-color: #7952b3; }
+            h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        </style>
+
+
+        <title>Localisation</title>
+    </head>
+    <body class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mx-auto mt-5">
+                    <form class="border p-3" method="POST" action="../serveur/traitementForm.php">
+                        <div class="mb-3">
+                            <label for="pseudo" class="form-label">Pseudo</label>
+                            <input type="text" class="form-control" id="pseudo" name="pseudo">
+                            <div class="alert alert-danger d-none mt-2" role="alert" id="pseudoExiste">
+                                Ce login existe déjà
+                              </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" name="password">
+                                <span class="input-group-text" id="buttonPw"><i class="px-2 far fa-eye"></i><span>
+                            </di>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirmation mot de passe</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                            <div class="alert alert-danger d-none mt-2" role="alert" id="pwOk">
+                                Les mots de passe ne correspondent pas
+                              </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="sexe" class="form-label">Sexe</label>
+                            <select class="form-select" aria-label="Default select example" id="sexe" name="sexe">
+                                <option value="" selected disabled>-- Veuillez choisir --</option>
+                                <option value="m">homme</option>
+                                <option value="f">femme</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="region" class="form-label">Région</label>
+                            <select class="form-select" id="region" name="region">
+                                <option selected disabled>-- Veuillez choisir une région --</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Département</label>
+                            <select class="form-select" id="department" name="department">
+                                <option selected disabled value="notSelected">Veuillez d'abord choisir une région</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ville" class="form-label">Ville</label>
+                            <input list="villeListe" type="text" class="form-control" id="ville" name="ville" disabled value="Choisissez une région, puis un département">
+                            <datalist id="villeListe">
+
+                            </datalist>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">&nbsp;</label>
+                            <input type="submit" class="btn btn-outline-primary w-100" value="S'inscrire">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    
+        
+
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

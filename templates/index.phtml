@@ -61,6 +61,10 @@
               <img src="assets/img/skills/react.png" alt="">
               <p>react</p>
             </div>
+            <div>
+              <img src="assets/img/skills/ajax.png" alt="">
+              <p>ajax</p>
+            </div>
           </div>
         </div>
         <div class="skill-type">
@@ -72,8 +76,16 @@
               <p>php</p>
             </div>
             <div>
-              <img src="assets/img/skills/kissclipart-azure-sql-db-clipart-microsoft-azure-sql-database-60229f0026e240f5-removebg-preview.png" alt="">
+              <img src="assets/img/skills/sql-logo.png" alt="">
               <p>sql</p>
+            </div>
+            <div>
+              <img src="assets/img/skills/symfony.png" alt="">
+              <p>symfony</p>
+            </div>
+            <div>
+              <img src="assets/img/skills/twig.png" alt="">
+              <p>twig</p>
             </div>
             <div>
               <img src="assets/img/skills/mongodb.png" alt="">
@@ -82,10 +94,6 @@
             <div>
               <img src="assets/img/skills/nodejs.png" alt="">
               <p>nodejs</p>
-            </div>
-            <div>
-              <img src="assets/img/skills/black-circle-png-download-512512-free-transparent-symfony-png-symfony-png-900_520 (Custom).jpg" alt="">
-              <p>symfony</p>
             </div>
           </div>
         </div>
@@ -115,31 +123,21 @@
                 <img src="assets/img/<?= $project['img'] ?>" class="img-responsive smoothie" alt="">
                 <div class="overlay-item-caption smoothie"></div>
                 <div class="hover-item-caption smoothie">
-                  <div class="vertical-center smoothie" style="padding-top: 129.685px;">
+                  <div class="vertical-center smoothie">
                     <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project"><?= $project['title'] ?></a></h3>
-                    <a href="assets/img/<?= $project['img'] ?>" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
+                    <a href="assets/img/<?= $project['img_full'] ?>" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
                     <a href="<?= $project['url'] ?>" class="smoothie btn btn-primary" target="_blank">View</a>
                   </div>
                 </div>
               </li>
             <?php } ?>
-            <!-- <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr design isotope-item hover-item" style="position: absolute; left: 0px; top: 401px;">
-                        <img src="assets/img/portfolio/portfolio2.jpg" class="img-responsive smoothie" alt="">
-                        <div class="overlay-item-caption smoothie"></div>
-                        <div class="hover-item-caption smoothie">
-                            <div class="vertical-center smoothie" style="padding-top: 16.2415px;">
-                                <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen-video.html" title="view project">Fullscreen Video</a></h3>
-                                <a href="assets/img/portfolio/portfolio2.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                <a href="single-portfolio-fullscreen.html" class="smoothie btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </li>-->
+
             <?php foreach ($pictures as $picture) { ?>
-              <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr photography isotope-item hover-item" style="position: absolute; left: 0px; top: 576px;">
+              <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr photography isotope-item hover-item">
                 <img src='<?= $picture['url_picture'] ?>' alt='by Nicolas Nielsen on 500px.com' class="img-responsive smoothie">
                 <div class="overlay-item-caption smoothie"></div>
                 <div class="hover-item-caption smoothie">
-                  <div class="vertical-center smoothie" style="padding-top: 16.246px;">
+                  <div class="vertical-center smoothie">
                     <h3 class="smoothie mb30"><a href="single-portfolio.html" title="view project"><?= $picture['title'] ?></a></h3>
                     <a href="<?= $picture['url_picture'] ?>" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
                     <a href="<?= $picture['url_500px'] ?>" class="smoothie btn btn-primary" target="_blank">View</a>
@@ -147,72 +145,6 @@
                 </div>
               </li>
             <?php } ?>
-            <!--<li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr video isotope-item hover-item" style="position: absolute; left: 0px; top: 751px;">
-                        <img src="assets/img/portfolio/portfolio2-tall.jpg" class="img-responsive smoothie" alt="">
-                        <div class="overlay-item-caption smoothie"></div>
-                        <div class="hover-item-caption smoothie">
-                            <div class="vertical-center smoothie" style="padding-top: 106.776px;">
-                                <h3 class="smoothie mb30"><a href="single-portfolio-carousel.html" title="view project">Carousel Gallery</a></h3>
-                                <a href="assets/img/portfolio/portfolio1.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                <a href="single-portfolio-carousel.html" class="smoothie btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr design isotope-item hover-item" style="position: absolute; left: 0px; top: 1108px;">
-                        <img src="assets/img/portfolio/portfolio5.jpg" class="img-responsive smoothie" alt="">
-                        <div class="overlay-item-caption smoothie"></div>
-                        <div class="hover-item-caption smoothie">
-                            <div class="vertical-center smoothie" style="padding-top: 28.2165px;">
-                                <h3 class="smoothie mb30"><a href="single-portfolio-video.html" title="view project">Video</a></h3>
-                                <a href="assets/img/portfolio/portfolio1.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                <a href="single-portfolio-video.html" class="smoothie btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr photography isotope-item hover-item" style="position: absolute; left: 0px; top: 1283px;">
-                        <img src="assets/img/portfolio/portfolio3-tall.jpg" class="img-responsive smoothie" alt="">
-                        <div class="overlay-item-caption smoothie"></div>
-                        <div class="hover-item-caption smoothie">
-                            <div class="vertical-center smoothie" style="padding-top: 73.324px;">
-                                <h3 class="mb30 smoothie"><a href="single-portfolio.html" title="view project">Project Title</a></h3>
-                                <a href="assets/img/portfolio/portfolio1.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                <a href="single-portfolio.html" class="smoothie btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr video isotope-item hover-item" style="position: absolute; left: 0px; top: 1574px;">
-                        <img src="assets/img/portfolio/portfolio7.jpg" class="img-responsive smoothie" alt="">
-                        <div class="overlay-item-caption smoothie"></div>
-                        <div class="hover-item-caption smoothie">
-                            <div class="vertical-center smoothie" style="padding-top: 15.751px;">
-                                <h3 class="mb30 smoothie"><a href="single-portfolio.html" title="view project">Project Title</a></h3>
-                                <a href="assets/img/portfolio/portfolio1.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                <a href="single-portfolio.html" class="smoothie btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr design isotope-item hover-item" style="position: absolute; left: 0px; top: 1749px;">
-                        <img src="assets/img/portfolio/portfolio8.jpg" class="img-responsive smoothie" alt="">
-                        <div class="overlay-item-caption smoothie"> </div>
-                        <div class="hover-item-caption smoothie">
-                            <div class="vertical-center smoothie" style="padding-top: 16.2075px;">
-                                <h3 class="mb30 smoothie"><a href="single-portfolio.html" title="view project">Project Title</a></h3>
-                                <a href="assets/img/portfolio/portfolio1.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                <a href="single-portfolio.html" class="smoothie btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-4 col-xs-6 masonry-portfolio-item nopadding-lr design isotope-item hover-item" style="position: absolute; left: 0px; top: 1924px;">
-                        <img src="assets/img/portfolio/portfolio9.jpg" class="img-responsive smoothie" alt="">
-                        <div class="overlay-item-caption smoothie"></div>
-                        <div class="hover-item-caption smoothie">
-                            <div class="vertical-center smoothie" style="padding-top: 16.248px;">
-                                <h3 class="mb30 smoothie"><a href="single-portfolio.html" title="view project">Project Title</a></h3>
-                                <a href="assets/img/portfolio/portfolio1.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                <a href="single-portfolio.html" class="smoothie btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </li> -->
           </ul>
         </div>
       </div>
@@ -222,7 +154,7 @@
       <div class="section-inner">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <div class="widget about-us-widget">
                 <h4 class="widget-title"><strong>Global</strong> Coverage</h4>
                 <p>Professionally monetize team building materials for 24/7 results. Holisticly transition corporate platforms vis-a-vis cutting-edge experiences. Dynamically strategize ubiquitous applications for premier initiatives. Interactively seize resource sucking niche markets.</p>
@@ -252,23 +184,26 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <div class="col-md-12">
               <div class="widget">
-                <h4 class="widget-title"><strong>Latest</strong> Articles</h4>
-                <div class="tagcloud">
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Local</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Business</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Media</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Photogtraphy</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Aid</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Fashion</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">News</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Cars</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Global Affairs</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Music</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Downloads</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">MP3</a>
+                <h2 class="widget-title">Le Lab°</h2>
+                <div class="tagcloud col-md-6">
+                  <a href="./lab/js/color-changer/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Color Changer</a>
+                  <a href="./lab/js/counter/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Counter</a>
+                  <a href="./lab/js/datagouv/client/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript/AJAX/PHP/SQL">Formulaire Régions/Départements/Villes</a>
+                  <a href="./lab/js/diaporama/diaporama.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Diaporama</a>
+                  <a href="./lab/js/FAQ/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">FAQ</a>
+                  <a href="./lab/js/modal/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Modal</a>
+                  <a href="./lab/js/pays/client/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript/AJAX/PHP">Sélecteur Pays</a>
+                  <a href="./lab/js/review-carousel/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Review Carousel</a>
+                  <!-- <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Global Affairs</a>
+                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Music</a>
+                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Downloads</a>
+                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">MP3</a> -->
+                </div>
+                <div>
+                  <iframe src="" frameborder="0" width='100%' height="1000px" style="display:none"></iframe>
                 </div>
               </div>
             </div>
@@ -356,6 +291,7 @@
   </div>
 
   <?php include 'include/scripts.phtml' ?>
+  <script src="assets/js/index.js"></script>
 </body>
 
 </html>
