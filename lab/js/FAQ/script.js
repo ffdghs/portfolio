@@ -12,7 +12,3 @@ for(value of plus) {
     }
   })  
 }
-
-let mavar = 12;
-
-console.log(isNaN(mavar));
