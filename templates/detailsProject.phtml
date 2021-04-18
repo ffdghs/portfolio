@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <?php include 'include/basehead.phtml' ?>
+</head>
+
+<body id="page-top">
+  <div class="details">
+    <?php include 'include/nav2.phtml' ?>
+    <header style="background-color:black;height:100px;"></header>
+    <!-- Navigation -->
+
+
+    <section id="detail-1">
+      <a href="index.php#portfolio"><img src="assets/svg/left.svg" alt=""></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 main-text">
+            <div class="d-flex justify-content-between">
+              <h2><?= $project['title'] ?></h2>
+              <a href="<?= $project['url'] ?>" target="_blank" class="btn btn-outline-dark">Voir le site</a>
+            </div>
+            <hr>
+            <div class='d-flex justify-content-between'>
+              <p><?= $project['type'] ?></p>
+              <p><?= date('F Y', strtotime($project['creation_date'])) ?></p>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <p><?= $project['desc_details_1'] ?></p>
+              <div class="skills">
+                <p>Technologies utilisées :</p>
+                <?php foreach ($techs as $tech) { ?>
+                  <img class="icon-skill" src="assets/img/skills/<?= $tech['image'] ?>" alt="<?= $tech['name'] ?>">
+                <?php } ?>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 main-img">
+            <img src="assets/img/projects/<?= $project['id'] . '/' . $project['picture_details_1'] ?>" alt="photo">
+          </div>
+        </div>
+        <div class="row">
+        </div>
+    </section>
+    <section id="detail-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="assets/img/projects/<?= $project['id'] . '/' . $project['picture_details_header'] ?>" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="detail-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 main-img">
+            <img src="assets/img/projects/<?= $project['id'] . '/' . $project['picture_details_2'] ?>" alt="photo">
+          </div>
+          <div class="col-md-6 main-text">
+            <?= $project['desc_details_2'] ?>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="detail-5">
+      <div class="container">
+        <div class="row">
+            <?php if($project['description'] != ''){
+              echo $project['description'];
+            }
+            ?>
+        </div>
+      </div>
+    </section>
+    <section class="dark-wrapper" id="detail-4">
+      <div class="row">
+        <video src="assets/video/<?= $project['video_details']?>" controls></video>
+        <a href="<?= $project['url'] ?>" target="_blank"><<<<< Voir le site >>>>></a>
+      </div>
+    </section>
+  </div>
+
+  <?php include 'include/footer.phtml' ?>
+
+  </div>
+
+
+
+  <?php include 'include/scripts.phtml' ?>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

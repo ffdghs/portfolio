@@ -10,22 +10,17 @@
     <!-- Navigation -->
     <?php include 'include/nav.phtml' ?>
 
-    <div id="search-wrapper">
-      <button type="button" class="close">×</button>
-      <div class="vertical-center text-center">
-        <form>
-          <input type="search" value="" placeholder="Enter Search Term" />
-          <button type="submit" class="btn btn-primary btn-white">Search</button>
-        </form>
-      </div>
-    </div>
-
     <?php include 'include/header.phtml' ?>
 
     <section id="about">
-      <h2>Développeur Web</h2>
-      <p class="mt-4">En reconversion comme dev web, intéressé par... Très...</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente fuga tempore harum consequuntur perspiciatis nobis, porro, dolorem adipisci exercitationem nemo quisquam deleniti ipsam, aperiam modi ipsum itaque consectetur molestiae impedit.</p>
+      <div class="row">
+        <div class="col">
+          <h2>Développeur Web</h2>
+          <p class="mt-4">En reconversion comme dev web.</p>
+          <p>Curieux et d'une logique assez développée, la programmation a souvent fait parti de mon environnement à petite échelle, que ce soit pour créer des applications en vba au cours de mon expérience professionnelle ou pour tweeker mes logiciels/os au quotidien.</p>
+          <a href="./CV_Nicolas_Nielsen.pdf" class="btn btn-primary btn-xl" id="btn-cv" target="_blank">Télécharger mon cv</a>
+        </div>
+      </div>
     </section>
 
     <section id="skills">
@@ -37,15 +32,15 @@
           <div>
             <div>
               <img src="assets/img/skills/html5.png" alt="">
-              <p>html</p>
+              <p>HTML</p>
             </div>
             <div>
               <img src="assets/img/skills/css3.png" alt="">
-              <p>css</p>
+              <p>CSS</p>
             </div>
             <div>
               <img src="assets/img/skills/bootstrap.png" alt="">
-              <p>bootstrap</p>
+              <p>Bootstrap</p>
             </div>
           </div>
         </div>
@@ -55,15 +50,15 @@
           <div>
             <div>
               <img src="assets/img/skills/javascript.png" alt="">
-              <p>javascript</p>
+              <p>JavaScript</p>
             </div>
             <div>
               <img src="assets/img/skills/react.png" alt="">
-              <p>react</p>
+              <p>React.js</p>
             </div>
             <div>
               <img src="assets/img/skills/ajax.png" alt="">
-              <p>ajax</p>
+              <p>Ajax</p>
             </div>
           </div>
         </div>
@@ -73,27 +68,27 @@
           <div>
             <div>
               <img src="assets/img/skills/php.png" alt="">
-              <p>php</p>
+              <p>PHP</p>
             </div>
             <div>
-              <img src="assets/img/skills/sql-logo.png" alt="">
-              <p>sql</p>
+              <img src="assets/img/skills/sql.png" alt="">
+              <p>SQL</p>
             </div>
             <div>
               <img src="assets/img/skills/symfony.png" alt="">
-              <p>symfony</p>
+              <p>Symfony</p>
             </div>
             <div>
               <img src="assets/img/skills/twig.png" alt="">
-              <p>twig</p>
+              <p>Twig</p>
             </div>
             <div>
               <img src="assets/img/skills/mongodb.png" alt="">
-              <p>mongodb</p>
+              <p>MongoDB</p>
             </div>
             <div>
               <img src="assets/img/skills/nodejs.png" alt="">
-              <p>nodejs</p>
+              <p>Node.js</p>
             </div>
           </div>
         </div>
@@ -109,9 +104,9 @@
               <ul class="masonry-portfolio-filters mb30 list-inline wow animated" style="visibility: visible;">
                 <!-- <li><a class="btn btn-primary active" href="#" data-filter="*">All</a></li> -->
                 <li><a class="btn btn-primary" href="#" data-filter=".apps">Apps (<?= $projectsCount['nbre'] ?>)</a></li>
-                <li><a class="btn btn-primary" href="#" data-filter=".design">Design</a></li>
                 <li><a class="btn btn-primary" href="#" data-filter=".photography">Photography (<?= $picturesCount['nbre'] ?>)</a></li>
-                <li><a class="btn btn-primary" href="#" data-filter=".video">Video</a></li>
+                <!-- <li><a class="btn btn-primary" href="#" data-filter=".design">Design</a></li>
+                <li><a class="btn btn-primary" href="#" data-filter=".video">Video</a></li> -->
               </ul>
             </div>
           </div>
@@ -126,7 +121,8 @@
                   <div class="vertical-center smoothie">
                     <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project"><?= $project['title'] ?></a></h3>
                     <a href="assets/img/<?= $project['img_full'] ?>" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                    <a href="<?= $project['url'] ?>" class="smoothie btn btn-primary" target="_blank">View</a>
+                    <a href="details.php?project=<?= $project['id'] ?>" class="smoothie btn btn-primary">View</a>
+                    <p class="smoothie mt30"><?= date('F-y',strtotime($project['creation_date']))  ?></p>
                   </div>
                 </div>
               </li>
@@ -150,7 +146,7 @@
       </div>
     </section>
 
-    <section class="dark-wrapper">
+    <section class="dark-wrapper" id="lab">
       <div class="section-inner">
         <div class="container">
           <div class="row">
@@ -197,10 +193,6 @@
                   <a href="./lab/js/modal/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Modal</a>
                   <a href="./lab/js/pays/client/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript/AJAX/PHP">Sélecteur Pays</a>
                   <a href="./lab/js/review-carousel/index.html" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Review Carousel</a>
-                  <!-- <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Global Affairs</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Music</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">Downloads</a>
-                  <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="Javascript">MP3</a> -->
                 </div>
                 <div>
                   <iframe src="" frameborder="0" width='100%' height="1000px" style="display:none"></iframe>
@@ -212,7 +204,7 @@
       </div>
     </section>
 
-    <?php include 'include/footer.phtml' ?>
+    <?php include 'include/footer.phtml';?>
 
   </div>
 
